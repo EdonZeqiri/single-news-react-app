@@ -18,9 +18,6 @@ function Contacts() {
             opacity:1,
             x:0,
             ease:'power3.out',
-            // stagger:{
-            // amount:0.5
-            // }
         })    
     }
     //Contact container animation fadeout

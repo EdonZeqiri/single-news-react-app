@@ -1,7 +1,7 @@
 import React, {useRef} from 'react'
 import './RelatedNews.css'
-import Photo_Related1 from '../../../assets/photo_related-01-01.jpg'
-import Photo_Related from '../../../assets/photo_related-02-01.jpg'
+import Photo_Related1 from '../../../assets/photo_related-02-01.png'
+import Photo_Related from '../../../assets/photo_related-03-01.png'
 import gsap from 'gsap'
 import {useIntersection} from 'react-use'
 
