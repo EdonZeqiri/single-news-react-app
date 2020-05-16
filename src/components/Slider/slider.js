@@ -1,5 +1,5 @@
 import React, {useRef} from 'react'
-import Photo_Slider from '../../assets/photo_slider.jpg'
+import Photo_Slider from '../../assets/photo_slider-01.jpg'
 import './slider.css'
 import gsap from 'gsap'
 import {useIntersection} from 'react-use'
