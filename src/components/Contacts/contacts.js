@@ -4,64 +4,46 @@ import gsap from 'gsap'
 import {useIntersection} from 'react-use'
 
 function Contacts() {
+    //Ref for our element
     const contactsItem = useRef(null)
+    //All the ref to be observed
     const intersection = useIntersection( contactsItem, {
         root:null,
         rootMargin:'0px',
-        threshold:0.8
+        threshold:0.2
     })
-    //Contact container left animation fadeIn
-    const fadeInLeft = element => {
+    //Contact container animation fadeIn
+    const fadeIn = element => {
         gsap.to(element, 1, {
             opacity:1,
             x:0,
             ease:'power3.out',
-            stagger:{
-            amount:0.5
-            }
+            // stagger:{
+            // amount:0.5
+            // }
         })    
     }
-    //Contact container left animation fadeout
-    const fadeOutLeft = element => {
+    //Contact container animation fadeout
+    const fadeOut = element => {
         gsap.to(element, 1, {
             opacity:0,
             x:-20,
             ease:'power3.out'
         })
     }
-    //Contact container right animation fadein
-    const fadeInRight = element=>{
-        gsap.to(element, 1.3, {
-            opacity:1,
-            x:0,
-            ease:'power3.inout',
-            stagger:{
-            amount:0.5
-            }
-        })   
-    }
-    //Contact container right animation fadeout
-    const fadeOutRight = element=>{
-        gsap.to(element, 1, {
-            opacity:0,
-            scale:0.8,
-            x:20,
-            ease:'power3.inout'
-        })
-    }
+
     //The condition to check if user is in viewport
-    if (intersection && intersection.intersectionRatio > 0.8) {
-        fadeInLeft('.contacts_container_left')
-        fadeInRight('.contacts_container_right')
+    if (intersection && intersection.intersectionRatio > 0.2) {
+        fadeIn('.contacts_container')
     } else{
-        fadeOutLeft('.contacts_container_left')
-        fadeOutRight('.contacts_container_right')
+        fadeOut('.contacts_container')
     }
+    
 
     return (
-        <div className='contacts_container'>
+        <div ref={contactsItem} className='contacts_container'>
             
-            <div ref={contactsItem}className='contacts_container_left'>
+            <div className='contacts_container_left'>
                 <div className='contacts_paragraphs'>
                     <p className='contacts_p1'>Contact</p> <p className='contacts_p2'>Us</p>
                 </div>
@@ -76,7 +58,7 @@ function Contacts() {
                 </div>
             </div>
             
-            <div ref={contactsItem} className='contacts_container_right'>
+            <div  className='contacts_container_right'>
                 <div className='contacts_paragraphs'>
                         <p className='contacts_p1'>Follow</p> <p className='contacts_p2'>Us</p>
                 </div>

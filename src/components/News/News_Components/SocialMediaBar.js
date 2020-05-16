@@ -5,8 +5,9 @@ import {useIntersection} from 'react-use'
 
 
 function SocialMediaBar() {
-
+    //Ref for our element
     const socialMediaBarItem = useRef(null)
+    //All the ref to be observed
     const intersection = useIntersection( socialMediaBarItem, {
         root:null,
         rootMargin:'0px',

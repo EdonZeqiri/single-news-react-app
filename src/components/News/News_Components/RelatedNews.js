@@ -7,12 +7,13 @@ import {useIntersection} from 'react-use'
 
 
  function RelatedNews() {
-
+    //Ref for our element
     const relatedNewsItem = useRef(null)
+    //All the ref to be observed
     const intersection = useIntersection( relatedNewsItem, {
         root:null,
         rootMargin:'0px',
-        threshold:0.5
+        threshold:0.1
     })
     //Related news title animation fadeIn
     const fadeIn = element => {
@@ -54,7 +55,7 @@ import {useIntersection} from 'react-use'
     }
 
     //The condition to check if user is in viewport
-    if (intersection && intersection.intersectionRatio > 0.5) {
+    if (intersection && intersection.intersectionRatio > 0.1) {
         fadeIn('.related_news_title')
         fadeInImage('.related_news_single_image')
     } else{
@@ -74,7 +75,7 @@ import {useIntersection} from 'react-use'
                     </div>
                     <div className='related_news_single_image'>
                         <img alt='' className='related_news_image_size'src={Photo_Related}></img>
-                        <p className='realted_image_date'>2018.01.07</p>
+                        <p className='realted_image_date_2'>2018.01.07</p>
                         <p className='realted_image_title'>Architecture Awards</p>
                     </div>
                 </div>

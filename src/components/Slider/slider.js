@@ -5,7 +5,9 @@ import gsap from 'gsap'
 import {useIntersection} from 'react-use'
 
 function Slider (){
+    //Ref for our element
     const sliderItem = useRef(null)
+    //All the ref to be observed
     const intersection = useIntersection( sliderItem, {
         root:null,
         rootMargin:'0px',

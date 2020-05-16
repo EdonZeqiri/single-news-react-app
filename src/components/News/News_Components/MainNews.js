@@ -4,11 +4,13 @@ import gsap from 'gsap'
 import {useIntersection} from 'react-use'
 
 function MainNews() {
+    //Ref for our element
     const mainNewsItem = useRef(null)
+    //All the ref to be observed
     const intersection = useIntersection( mainNewsItem, {
         root:null,
         rootMargin:'0px',
-        threshold:0.3
+        threshold:0.2
     })
     //Main news container animation fadeIn
     const fadeIn = element => {
@@ -31,7 +33,7 @@ function MainNews() {
     }
 
     //The condition to check if user is in viewport
-    if (intersection && intersection.intersectionRatio > 0.3) {
+    if (intersection && intersection.intersectionRatio > 0.2) {
         fadeIn('.main_news_container')
         
     } else{
