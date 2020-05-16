@@ -1,0 +1,12 @@
+.app{
+  background: linear-gradient(90deg, rgba(33,33,33,1) 0%, rgba(33,33,33,1) 91%, rgba(17,17,17,1) 91%, rgba(17,17,17,1) 100%);
+  width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto&display=swap');
+
+@media screen and (max-width: 768px) {
+  .app{
+  background: #212121;
+}
+}

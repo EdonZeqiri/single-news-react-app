@@ -1,0 +1,28 @@
+.social_media_bar_container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.social_media_bar , .social_media_hr{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+}
+.social_media_bar > h4 {
+    padding-right: 20px;
+    color: #8A8A8A;
+}
+hr {
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .social_media_bar_container{
+        width: 100%;
+    }
+}
