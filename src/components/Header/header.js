@@ -9,12 +9,11 @@ export class Header extends Component {
             navLinks:false
         }
     }
-
+//Hamburger menu for Responsive
     handleClickNav=()=> {
         this.setState({isOpen:!this.state.isOpen})
-        console.log(this.state.isOpen)
     }
-    
+// Function for li animation after hamburger menu is clicked
     handleNavLinks = () =>{
         if(this.state.isOpen===true){
             this.setState({navLinks:!this.state.navLinks})

@@ -15,10 +15,10 @@
     padding: 84px 40px 40px 40px;
 }
 
-.main_news_left >h3 {
+.main_news_left_date {
     color: #545454;
 }
-.main_news_left, .main_news_right > p{
+.main_news_left_paragraph{
     color: white;
 }
 

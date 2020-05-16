@@ -8,7 +8,7 @@
     height: auto;
 }
 
-.related_news > h1 {
+.related_news_title {
     color:white;
     font-weight: 500;
 }

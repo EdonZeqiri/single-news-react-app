@@ -3,14 +3,14 @@ import './MainNews.css'
 import gsap from 'gsap'
 import {useIntersection} from 'react-use'
 
-export default function MainNews() {
+function MainNews() {
     const mainNewsItem = useRef(null)
     const intersection = useIntersection( mainNewsItem, {
         root:null,
         rootMargin:'0px',
         threshold:0.3
     })
-
+    //Main news container animation fadeIn
     const fadeIn = element => {
         gsap.to(element, 1, {
             opacity:1,
@@ -21,6 +21,7 @@ export default function MainNews() {
             }
         })    
     }
+    //Main news container animation fadeOut
     const fadeOut = element => {
         gsap.to(element, 1, {
             opacity:0,
@@ -29,8 +30,7 @@ export default function MainNews() {
         })
     }
 
-   
-
+    //The condition to check if user is in viewport
     if (intersection && intersection.intersectionRatio > 0.3) {
         fadeIn('.main_news_container')
         
@@ -42,8 +42,8 @@ export default function MainNews() {
     return (
         <div ref ={mainNewsItem} className='main_news_container'>
             <div className='main_news_left'>
-                <h3>02.04.2019</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                <h3 className='main_news_left_date'>02.04.2019</h3>
+                <p className='main_news_left_paragraph'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
                 standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a 
                 type specimen book. <br/> <br/>It has survived not only five centuries, but also the leap into electronic typesetting, 
                 remaining essentially unchanged.
@@ -53,7 +53,7 @@ export default function MainNews() {
             </div>
 
             <div className='main_news_right'>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                <p className='main_news_left_paragraph'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
                 standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a 
                 type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
                 remaining essentially unchanged.</p>
@@ -61,3 +61,5 @@ export default function MainNews() {
         </div>
     )
 }
+
+export default MainNews

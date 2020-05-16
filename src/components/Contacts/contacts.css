@@ -73,56 +73,30 @@
         width: 100%;
     }
     .contacts_paragraphs{
-        width: 100%;
-        display: flex;
         justify-content: center;
     }
     .contacts_p1{
-        font-size: 26px;
-        color: white;
-        font-weight: 500;
-        
+        font-size: 26px;        
     }
     .contacts_p2{
         font-size: 26px;
-        color: #545454;
-        font-weight: 600;
-        padding-left: 8px;
     }
     .contacts_info{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
         align-items: center;
     }
     .contacts_info_dscp{
-        color: white;
-        line-height: 2%;
-        font-weight: 500;
         font-size: 14px;
     }
     
     .contacts_view_map{
-        width: 100%;
-        color: #545454;
         font-size: 16px;
-        font-weight: 500;
-        padding-top: 3%;
-        display: flex;
-        flex-direction: column;
         align-items: center;
     }
     .contacts_container_right{
         width: 100%;
     }
     .contacts_follow{
-        width: 100%;;
-        color: white;
         font-size: 18px;
-        font-weight: 400;
-        padding-top: 4%;
-        display: flex;
-        flex-direction: column;
         align-items: center;
 }
 }

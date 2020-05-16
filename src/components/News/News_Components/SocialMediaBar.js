@@ -4,14 +4,15 @@ import gsap from 'gsap'
 import {useIntersection} from 'react-use'
 
 
-export default function SocialMediaBar() {
+function SocialMediaBar() {
+
     const socialMediaBarItem = useRef(null)
     const intersection = useIntersection( socialMediaBarItem, {
         root:null,
         rootMargin:'0px',
         threshold:0.9
     })
-
+    //Social media titles animation fadeIn
     const fadeIn = element => {
         gsap.to(element, 1, {
             opacity:1,
@@ -22,6 +23,7 @@ export default function SocialMediaBar() {
             }
         })    
     }
+    //Social media titles animation fadeOut
     const fadeOut = element => {
         gsap.to(element, 1, {
             opacity:0,
@@ -29,6 +31,7 @@ export default function SocialMediaBar() {
             ease:'power3.out'
         })
     }
+    //Line under social media animation fadeIn
     const fadeInHr = element =>{
         gsap.to(element,1, {
             opacity:1,
@@ -37,6 +40,7 @@ export default function SocialMediaBar() {
         }
         )
     }
+    //Line under social media animation fadeOut
     const fadeOutHr = element =>{
         gsap.to(element,1, {
             opacity:0,
@@ -45,7 +49,7 @@ export default function SocialMediaBar() {
         }
         )
     }
-
+    //The condition to check if user is in viewport 
     if (intersection && intersection.intersectionRatio > 0.9) {
         fadeIn('.social_media_bar')
         fadeInHr('.social_media_hr')
@@ -65,3 +69,5 @@ export default function SocialMediaBar() {
         </div>
     )
 }
+
+export default SocialMediaBar
