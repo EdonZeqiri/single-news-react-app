@@ -61,7 +61,9 @@ function SocialMediaBar() {
     return (
         <div className='social_media_bar_container' ref={socialMediaBarItem}>
             <div className='social_media_bar'>
-                <h4 class='social_media_bar_h4' >Facebook</h4> <h4>Instagram</h4> <h4>Youtube</h4>
+                <a href='https://www.facebook.com/'className='social_media_bar_a' >Facebook</a> 
+                <a href='https://www.instagram.com/' className='social_media_bar_a'>Instagram</a> 
+                <a href='https://www.youtube.com/' className='social_media_bar_a'>Youtube</a>
             </div>
             <div className='social_media_hr'>
                 <hr ></hr>

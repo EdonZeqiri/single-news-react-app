@@ -68,12 +68,12 @@ import {useIntersection} from 'react-use'
                 <h1 className='related_news_title'>Related News</h1>
                 <div ref={relatedNewsItem}className='related_news_image_container'>
                     <div ref={relatedNewsItem} className='related_news_single_image'>
-                        <img class='related_news_image_size'src={Photo_Related1}></img>
+                        <img alt='' className='related_news_image_size'src={Photo_Related1}></img>
                         <p className='realted_image_date'>2018.03.11</p>
                         <p className='realted_image_title'>NZIA Public Architecture</p>
                     </div>
                     <div className='related_news_single_image'>
-                        <img class='related_news_image_size'src={Photo_Related}></img>
+                        <img alt='' className='related_news_image_size'src={Photo_Related}></img>
                         <p className='realted_image_date'>2018.01.07</p>
                         <p className='realted_image_title'>Architecture Awards</p>
                     </div>

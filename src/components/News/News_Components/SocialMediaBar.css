@@ -11,9 +11,14 @@
     width: 100%;
     display: flex;
 }
-.social_media_bar > h4 {
+.social_media_bar_a {
     padding-right: 20px;
     color: #8A8A8A;
+    text-decoration: none;
+    font-weight: 700;
+}
+.Link:link{
+    color: white;
 }
 hr {
     margin-top: 20px;

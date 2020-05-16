@@ -1,7 +1,6 @@
 import React, {useRef} from 'react'
 import Photo_Slider from '../../assets/photo_slider.jpg'
 import './slider.css'
-import{TweenMax,TimelineLite, Power3} from 'gsap'
 import gsap from 'gsap'
 import {useIntersection} from 'react-use'
 
@@ -41,7 +40,7 @@ function Slider (){
     return (
             <div className='slider_container'>
                 <div ref={sliderItem} className='slider'> 
-                    <img class='slider_img'src={Photo_Slider}></img>
+                    <img alt=''  className='slider_img'src={Photo_Slider}></img>
                     <h1 className='slder_title'>Open House <br/> Prishtina</h1>
                 </div>
                 

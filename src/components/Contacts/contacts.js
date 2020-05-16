@@ -81,9 +81,9 @@ function Contacts() {
                         <p className='contacts_p1'>Follow</p> <p className='contacts_p2'>Us</p>
                 </div>
                 <div className='contacts_info'>
-                    <p className='contacts_info_dscp'>Facebook</p> 
-                    <p className='contacts_info_dscp'>Instagram</p> 
-                    <p className='contacts_info_dscp'>Youtube</p> 
+                    <a href='https://www.facebook.com/' className='contacts_info_sm'>Facebook</a> 
+                    <a href='https://www.facebook.com/' className='contacts_info_sm'>Instagram</a> 
+                    <a href='https://www.facebook.com/'className='contacts_info_sm'>Youtube</a> 
                 </div>
                 <div className='contacts_follow'>
                     <p className='contacts_follow'>archides @2018</p>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './header.css';
+import {Link} from 'react-router-dom'
 
 export class Header extends Component {
     constructor(){
@@ -31,12 +32,12 @@ export class Header extends Component {
                         <div className="line"></div>
                         <div className="line"></div>
                     </div>
-                    <ul className={(this.state.isOpen == false ? 'nav-links open ':'nav-links')}>
-                        <li className={(typeof this.state.navLinks == true ? 'fade':'li_1')}>Projects</li>
-                        <li className={(typeof this.state.navLinks == true ? 'fade':'li_2')}>Services</li>
-                        <li className={(typeof this.state.navLinks == true ? 'fade':'li_3')}>About</li>
-                        <li className={(typeof this.state.navLinks == true ? 'fade':'li_4')}>News</li>
-                        <li className={(typeof this.state.navLinks == true ? 'fade':'li_5')}>Contact</li>
+                    <ul className={(this.state.isOpen === false ? 'nav-links open ':'nav-links')}>
+                     <Link to={`/`} style={{ textDecoration: 'none' }}><li className={(typeof this.state.navLinks == true ? 'fade':'li_1')}>Projects</li></Link> 
+                     <Link to={`/`} style={{ textDecoration: 'none' }}><li className={(typeof this.state.navLinks == true ? 'fade':'li_2')}>Services</li></Link> 
+                     <Link to={`/`} style={{ textDecoration: 'none' }}><li className={(typeof this.state.navLinks == true ? 'fade':'li_3')}>About</li></Link> 
+                     <Link to={`/`} style={{ textDecoration: 'none' }}><li className={(typeof this.state.navLinks == true ? 'fade':'li_4')}>News</li></Link> 
+                     <Link to={`/`} style={{ textDecoration: 'none' }}><li className={(typeof this.state.navLinks == true ? 'fade':'li_5')}>Contact</li></Link> 
                     </ul>
                 </nav>
             </div>

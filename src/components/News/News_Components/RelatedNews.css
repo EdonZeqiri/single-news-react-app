@@ -19,6 +19,7 @@
     justify-content: flex-start;
     flex-direction: row;
     align-items: flex-end;
+    cursor: pointer;
 }
 
 .related_news_image_container{
@@ -34,7 +35,9 @@
     width: 100%;
     height: 90%;
 }
-
+.related_news_image_size:hover {
+  
+}
 .realted_image_title{
     position: absolute;
     padding: 40px;

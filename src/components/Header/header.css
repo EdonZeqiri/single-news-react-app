@@ -15,10 +15,11 @@ nav {
 .nav-links li  {
   color:#545454;
   font-weight: 700;
-  text-decoration: none;
   font-size: 16px;
   cursor: pointer;
+  text-decoration: none !important;
 }
+
 .nav-links li:hover{
   color: aliceblue;
 }
