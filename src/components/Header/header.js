@@ -6,11 +6,11 @@ export class Header extends Component {
     constructor(){
         super()
         this.state={
-            isOpen:true,
+            isOpen:false,
             navLinks:false
         }
     }
-//Hamburger menu for Responsive
+//Function to check is hamburger menu clicked for Responsive
     handleClickNav=()=> {
         this.setState({isOpen:!this.state.isOpen})
     }
@@ -22,17 +22,17 @@ export class Header extends Component {
     }
 
     render() {
+        console.log(this.state.isOpen)
         return (
             
             <div className='header'>
                  <nav>
-                    <div onClick={this.handleClickNav} 
-                    className='hamburger'>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
+                    <div onClick={this.handleClickNav} className={(this.state.isOpen === true ? 'open_hamburger ':'hamburger')}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                    <ul className={(this.state.isOpen === false ? 'nav-links open ':'nav-links')}>
+                    <ul className={(this.state.isOpen === true ? 'nav-links open ':'nav-links')}>
                      <Link to={`/`} style={{ textDecoration: 'none' }}><li className={(typeof this.state.navLinks == true ? 'fade':'li_1')}>Projects</li></Link> 
                      <Link to={`/`} style={{ textDecoration: 'none' }}><li className={(typeof this.state.navLinks == true ? 'fade':'li_2')}>Services</li></Link> 
                      <Link to={`/`} style={{ textDecoration: 'none' }}><li className={(typeof this.state.navLinks == true ? 'fade':'li_3')}>About</li></Link> 
